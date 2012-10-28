@@ -28,6 +28,14 @@ grunt.initConfig({
 
 ```
 
+You might also want to trigger the compiled process by watching the file change.
+Append following ine in the grunt.initConfig list.
+```javascript
+watch: {
+  files: '<config:html2json.dist.src>',
+  tasks: 'default'
+}
+```
 
 
 ## Contributing
