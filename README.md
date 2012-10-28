@@ -3,6 +3,7 @@
 Compile the html files into a JSON file.
 
 This feature is very useful when you use a lot of JS template with client-side javascripts.
+
 You can get one single JSON file and use JSON.parse convert it into a dict.
 With the dict, you can easily pick up the the template you wish to render, which saves you a lot of trouble by getting html file one by one.
 
@@ -10,7 +11,7 @@ With the dict, you can easily pick up the the template you wish to render, which
 /*
 * tpl_str might be something looks like:
 * {
-*    "h2": "<h2 class="title">{{h2}}!</h2>",
+*    "h2": "<h2 class="title">{{title}}!</h2>",
 *	  "p": "<p class="warnning">{{msg}}</p>"
 * }
 */
@@ -18,8 +19,7 @@ var tpl_str = ... // get the JSON content from some where, either from requre.js
 var tpl = JSON.parse(tpl_str);
 
 //render to: <h2 class="title">Hello World~!</h2>
-Mustache.render(tpl.h2, {h2: 'Hello World~!'});
-
+Mustache.render(tpl.h2, {title: 'Hello World~!'});
 //render to "<p class="warnning">Alert!</p>"
 Mustache.render(tpl.p, {msg: 'Alert!'});
 ```
@@ -43,12 +43,15 @@ grunt.initConfig({
   html2json: {
     dist: {
        src: ['src/*.txt', 'src/*.html'],
-       dest: 'dist/built.json'
+       dest: 'dist/templates.json'
     }
   }
 });
 
 ```
+
+With this task, you can compile all `txt` and `html` files in `src` into `dist/templates.json`.
+
 
 You might also want to trigger the compiled process by watching the file change.
 Append following ine in the grunt.initConfig list.
