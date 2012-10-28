@@ -1,8 +1,7 @@
 # grunt-html2json
 
-Compile the html files into a JSON file.
-
-This feature is very useful when you use a lot of JS template with client-side javascripts.
+As a intensive client-side javascript template user, I alwasy try to find the best way to load the templates.
+And I found it is a very good practise that compiling the templates into on single JSON file.
 
 You can get one single JSON file and use JSON.parse convert it into a dict.
 With the dict, you can easily pick up the the template you wish to render, which saves you a lot of trouble by getting html file one by one.
@@ -15,7 +14,8 @@ With the dict, you can easily pick up the the template you wish to render, which
 *	  "p": "<p class="warnning">{{msg}}</p>"
 * }
 */
-var tpl_str = ... // get the JSON content from some where, either from requre.js text plugin or your AJAX call.
+var tpl_str = ... // get the JSON content from some where, 
+                  // either from requre.js text plugin or a AJAX call.
 var tpl = JSON.parse(tpl_str);
 
 //render to: <h2 class="title">Hello World~!</h2>
