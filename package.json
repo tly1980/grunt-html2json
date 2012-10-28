@@ -1,0 +1,37 @@
+{
+  "name": "grunt-html2json",
+  "description": "The best sample grunt tasks ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/minddriven/grunt-html2json",
+  "author": {
+    "name": "Tom Tang",
+    "email": "tly1980@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/minddriven/grunt-html2json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/minddriven/grunt-html2json/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/minddriven/grunt-html2json/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "grunt.js",
+  "bin": "bin/grunt-html2json",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.18a"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
