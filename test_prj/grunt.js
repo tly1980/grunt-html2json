@@ -5,13 +5,13 @@ module.exports = function(grunt) {
     html2json: {
       dist: {
          src: ['src/*.txt', 'src/*.html'],
-         dest: 'dist/built.json',
+         dest: 'dist/templates.json',
          pretty_print:false
       }
     },
     watch: {
       files: '<config:html2json.dist.src>',
-      tasks: 'default'
+      tasks: 'html2json'
     }
   });
 
