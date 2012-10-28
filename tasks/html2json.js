@@ -12,11 +12,16 @@ module.exports = function(grunt) {
   // TASKS
   // ==========================================================================
 
-  grunt.registerMultiTask('html2json', 'Concatenate files.', function() {
+  grunt.registerMultiTask('html2json', 'Compile html or any txt files into a json file.', function() {
+
     var files = grunt.file.expandFiles(this.file.src);
-    // Concat specified files.
-    var ret = grunt.helper('html2json', files, {separator: this.data.separator});
-    grunt.file.write(this.file.dest, JSON.stringify(ret));
+
+    // Construct the JSON file.
+    var content = grunt.helper('html2json', files, {separator: this.data.separator});
+
+    grunt.file.write(this.file.dest, JSON.stringify(content, null, '\t'));
+    // if you don't want the pretty_print, use following line
+    //grunt.file.write(this.file.dest, JSON.stringify(content));
 
     // Fail task if errors were logged.
     if (this.errorCount) { return false; }
@@ -29,6 +34,12 @@ module.exports = function(grunt) {
   // HELPERS
   // ==========================================================================
 
+  function filename_to_key(filenmame){
+      ret = filenmame.split('/').pop();
+      ret = ret.split('.').shift();
+      return ret;
+  }
+
   // Concat source files and/or directives.
   grunt.registerHelper('html2json', function(files, options) {
     options = grunt.utils._.defaults(options || {}, {
@@ -36,9 +47,9 @@ module.exports = function(grunt) {
     });
     var ret = {};
 
-
     files.map(function(filepath) {
-      ret[filepath]= grunt.task.directive(filepath, grunt.file.read);
+      var filenames = filepath.split('/');
+      ret[filename_to_key(filepath)]= grunt.task.directive(filepath, grunt.file.read);
     });
 
     return ret;
