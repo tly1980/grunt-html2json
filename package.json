@@ -1,6 +1,6 @@
 {
   "name": "grunt-html2json",
-  "description": "The best sample grunt tasks ever.",
+  "description": "Compiling the html templates into on single JSON file.",
   "version": "0.1.0",
   "homepage": "https://github.com/minddriven/grunt-html2json",
   "author": {

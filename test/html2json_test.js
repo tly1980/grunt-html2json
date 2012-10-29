@@ -21,14 +21,17 @@ var grunt = require('grunt');
 */
 
 exports['html2json'] = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
-  'helper': function(test) {
-    test.expect(1);
-    // tests here
-    test.equal(grunt.helper('html2json'), 'html2json!!!', 'should return the correct value.');
-    test.done();
-  }
+  
+  // setUp: function(done) {
+  //   // setup here
+  //   "use strict";
+  //   done();
+  // },
+  // 'helper': function(test) {
+  //   "use strict";
+  //   test.expect(1);
+  //   // tests here
+  //   //test.equal(grunt.helper('html2json'), 'html2json!!!', 'should return the correct value.');
+  //   test.done();
+  // }
 };
