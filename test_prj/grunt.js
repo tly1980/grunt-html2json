@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-
+  "use strict";
   // // Project configuration.
   grunt.initConfig({
     html2json: {
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
   });
 
   // Load local tasks.
-  grunt.loadTasks('../tasks');
+  grunt.loadTasks('html2json');
 
   // Default task.
   grunt.registerTask('default', 'html2json');

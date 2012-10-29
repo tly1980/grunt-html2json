@@ -7,7 +7,7 @@
  */
 
 module.exports = function(grunt) {
-
+  "use strict";
   // ==========================================================================
   // TASKS
   // ==========================================================================
@@ -34,10 +34,10 @@ module.exports = function(grunt) {
   // HELPERS
   // ==========================================================================
 
-  function filename_to_key(filenmame){
-      ret = filenmame.split('/').pop();
-      ret = ret.split('.').shift();
-      return ret;
+  function filename_to_key(filename){
+      var filename_new = filename.split('/').pop();
+      filename_new = filename_new.split('.').shift();
+      return filename_new;
   }
 
   // Concat source files and/or directives.
