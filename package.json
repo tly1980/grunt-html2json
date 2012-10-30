@@ -1,7 +1,7 @@
 {
   "name": "grunt-html2json",
   "description": "Compiling the html templates into on single JSON file.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/minddriven/grunt-html2json",
   "author": {
     "name": "Tom Tang",
