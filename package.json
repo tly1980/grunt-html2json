@@ -1,23 +1,23 @@
 {
   "name": "grunt-html2json",
   "description": "Compiling the html templates into on single JSON file.",
-  "version": "0.1.1",
-  "homepage": "https://github.com/minddriven/grunt-html2json",
+  "version": "0.1.2",
+  "homepage": "https://github.com/tly1980/grunt-html2json",
   "author": {
     "name": "Tom Tang",
     "email": "tly1980@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/minddriven/grunt-html2json.git"
+    "url": "git://github.com/tly1980/grunt-html2json.git"
   },
   "bugs": {
-    "url": "https://github.com/minddriven/grunt-html2json/issues"
+    "url": "https://github.com/tly1980/grunt-html2json/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/minddriven/grunt-html2json/blob/master/LICENSE-MIT"
+      "url": "https://github.com/tly1980/grunt-html2json/blob/master/LICENSE-MIT"
     }
   ],
   "main": "grunt.js",
