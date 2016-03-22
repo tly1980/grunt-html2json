@@ -1,5 +1,8 @@
 {
-	"text_file": "This is a text file",
-	"h2": "<h2>This is H2 Title!</h2>",
-	"p": "<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. \nEtiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>"
+	"src/h2.html": "<h2>This is H2 Title!</h2>",
+	"src/p.html": "<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. \r\nEtiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>",
+	"src/subFolder/h2.html": "<h2>This is H2 Title!</h2>",
+	"src/subFolder/p.html": "<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. \r\nEtiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>",
+	"src/subFolder/text_file.txt": "This is a text file",
+	"src/text_file.txt": "This is a text file"
 }

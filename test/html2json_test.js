@@ -20,7 +20,7 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
-exports['html2json'] = {
+exports.html2json = {
   
   // setUp: function(done) {
   //   // setup here

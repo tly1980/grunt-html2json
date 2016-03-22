@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     html2json: {
       dist: {
-         src: ['src/*.txt', 'src/*.html'],
+         src: ['src/**/*'],
          dest: 'dist/templates.json',
          pretty_print:false
       }
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
   });
 
   // Load local tasks.
-  grunt.loadTasks('html2json');
+  grunt.loadTasks('../tasks');
 
   // Default task.
   grunt.registerTask('default', 'html2json');
