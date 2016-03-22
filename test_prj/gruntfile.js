@@ -16,7 +16,7 @@ module.exports = function(grunt) {
   });
 
   // Load local tasks.
-  grunt.loadTasks('html2json');
+  grunt.loadTasks('../tasks');
 
   // Default task.
   grunt.registerTask('default', 'html2json');
