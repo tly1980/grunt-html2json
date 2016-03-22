@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     html2json: {
       dist: {
-         src: ['src/*.txt', 'src/*.html'],
+         src: ['src/**/*'],
          dest: 'dist/templates.json',
          pretty_print:false
       }
