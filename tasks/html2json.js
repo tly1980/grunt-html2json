@@ -36,12 +36,6 @@ module.exports = function(grunt) {
   // HELPERS
   // ==========================================================================
 
-  function filename_to_key(filename){
-      var filename_new = filename.split('/').pop();
-      filename_new = filename_new.split('.').shift();
-      return filename_new;
-  }
-
   // Concat source files and/or directives.
   function processHtmlToJson(files, options) {
     options = grunt.util._.defaults(options || {}, {
@@ -50,8 +44,10 @@ module.exports = function(grunt) {
     var ret = {};
 
     files.map(function(filepath) {
-      var filenames = filepath.split('/');
-      ret[filename_to_key(filepath)]= grunt.file.read(filepath, grunt.file.read);
+      if (!grunt.file.isDir(filepath)) {
+        var filenames = filepath.split('/');
+        ret[filepath]= grunt.file.read(filepath, grunt.file.read);
+      }
     });
 
     return ret;
